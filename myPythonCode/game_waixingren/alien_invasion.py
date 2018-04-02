@@ -14,7 +14,7 @@ def run_game():
 
     #创建一艘飞船
     ship = Ship(screen)
-    bsb = Bsb(screen)
+    # bsb = Bsb(screen)
     #设置背景色
     # bg_color = (230, 230, 230)
     #开始游戏的主循环
@@ -22,7 +22,7 @@ def run_game():
         
         gf.check_events(ship)
         ship.update()
-        gf.update_screen(ai_settings, screen, ship, bsb)
+        gf.update_screen(ai_settings, screen, ship,)
         
 
 run_game()
