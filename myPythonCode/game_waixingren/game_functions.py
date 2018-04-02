@@ -25,6 +25,7 @@ def check_events(ship):
             check_keydown_events(event, ship)
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
+
 def update_screen(ai_settings, screen, ship, *args):
     '''更新屏幕上的图像，并切换到新屏幕（刷新屏幕）'''
     #每次循环都会绘制屏幕,填充背景色
