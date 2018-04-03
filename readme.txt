@@ -1,3 +1,1 @@
-Git is a distributed version control system.
-Git is software.
-meishi wojiu kankan 
+这个游戏是学习《Python编程：从入门到实践》中的一个项目
