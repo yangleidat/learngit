@@ -28,7 +28,8 @@ def get_file_content(filepath):
         return fp.read()
 
 token = get_token()
-file = r'D:\myCode\myPythonCode\API\baidu\yuyin2wenzi\public\16k.pcm'
+file = r'D:\myCode\myPythonCode\API\baidu\yuyin2wenzi\public\output.raw'
 speech = get_file_content(file)
 result = a.asr(speech, 'pcm', 16000, {'dev_pid':'1536', 'cuid':'yangleidat', 'token':token})
-print('\n'+result['result'][0])
+# print('\n'+result['result'][0])
+print(result)
