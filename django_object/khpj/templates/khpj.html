@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/j183min.js"></script>
+    <script src="/static/js/jm123min.js"></script>
+    <title>
+        外来人员服务评价
+    </title>
+{#    <script>#}
+{#        $(function () {#}
+{#        });#}
+{#    </script>#}
+</head>
+<body>
+    <h3>您的评价就是对我们工作的支持，谢谢您！</h3>
+    <form name="form1" method="post" action="/khpj/" id="form1">
+{#        <div>#}
+{#            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyMTcwODQ1NzhkZKZEZJTIsv2A5ulRrD3xwxX+e7APNnlDztNaHBLszFHK" />#}
+{#        </div>#}
+{#        <div>#}
+{#            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="542EC703" />#}
+{#        </div>#}
+            <div data-role="collapsible" data-collapsed="false">
+                <h1>基础信息</h1>
+                <label for="empName">服务对接人姓名：</label>
+                <input type="text" name="name" class="validate" id="empName">
+                <label for="empTel">对接人电话：</label>
+                <input type="text" name="mobile" id="empTel">
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>服务内容：</legend>
+                    <label for="装车">装车</label>
+                    <input type="radio" name="service" id="装车" value="装车">
+                    <label for="卸车">卸车</label>
+                    <input type="radio" name="service" id="卸车" value="卸车">
+                    <label for="退货">退货</label>
+                    <input type="radio" name="service" id="退货" value="退货">
+                </fieldset>
+            </div>
+            <div data-role="collapsible" data-collapsed="false">
+                <h1>服务评价内容</h1>
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>1.您抵达公司后多长时间后工作人员与您对接？</legend>
+                    <label for="10min">10min</label>
+                    <input type="radio" name="waiting_time" id="10min" value="10min">
+                    <label for="20min">20min</label>
+                    <input type="radio" name="waiting_time" id="20min" value="20min">
+                    <label for="30min">30min</label>
+                    <input type="radio" name="waiting_time" id="30min" value="30min">
+                    <label for="无">无</label>
+                    <input type="radio" name="waiting_time" id="无" value="无">
+                </fieldset>
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>2.您对我公司提供的装/卸车及现场调度工作是否满意？</legend>
+                    <label for="a21">满意</label>
+                    <input type="radio" name="overall_satisfaction" id="a21" value="满意">
+                    <label for="a22">不满意</label>
+                    <input type="radio" name="overall_satisfaction" id="a22" value="不满意">
+                </fieldset>
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>3.您对公司工作人员服务态度是否满意？</legend>
+                    <label for="a31">满意</label>
+                    <input type="radio" name="attitude" id="a31" value="满意">
+                    <label for="a32">不满意</label>
+                    <input type="radio" name="attitude" id="a32" value="不满意">
+                </fieldset>
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>4.工作人员为您装/卸车的时间周期是多少？</legend>
+                    <label for="a41">1小时</label>
+                    <input type="radio" name="cycle" id="a41" value="1小时">
+                    <label for="a42">2小时</label>
+                    <input type="radio" name="cycle" id="a42" value="2小时">
+                    <label for="a43">3小时</label>
+                    <input type="radio" name="cycle" id="a43" value="3小时">
+                    <label for="a44">4小时</label>
+                    <input type="radio" name="cycle" id="a44" value="4小时">
+                </fieldset>
+                <fieldset data-type="horizontal" data-role="controlgroup">
+                    <legend>5.公司工作人员是否提醒您在公司用餐或发放餐券？</legend>
+                    <label for="a51">有</label>
+                    <input type="radio" name="eat" id="a51" value="有">
+                    <label for="a52">无</label>
+                    <input type="radio" name="eat" id="a52" value="无">
+                </fieldset>
+                <label for="proposal">欢迎您对我公司提出宝贵的意见及建议：</label>
+                <textarea name="proposal" id="proposal"></textarea>
+                <input type="submit" value="提交" class="button">
+            </div>
+        {% csrf_token %}
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+SL(6)                                                      Games Manual                                                      SL(6)
+
+NNAAMMEE
+       sl - display animations aimed to correct users who accidentally enter ssll instead of llss.
+
+SSYYNNOOPPSSIISS
+       ssll [ --aallFFee ]
+
+DDEESSCCRRIIPPTTIIOONN
+       ssll Displays animations aimed to correct users who accidentally enter ssll instead of llss.  SL stands for Steam Locomotive.
+
+OOPPTTIIOONNSS
+       --aa     An accident seems to happen. You'll feel pity for people who cry for help.
+
+       --ll     shows little one.
+
+       --FF     It flies.
+
+       --ee     Allow interrupt by Ctrl+C.
+
+SSEEEE AALLSSOO
+       llss(1)
+
+BBUUGGSS
+       It rarely shows contents of current directory.
+
+AAUUTTHHOORR
+       ssll  was  written  by  Toyoda  Masashi  <toyoda@is.titech.ac.jp>.  This  manual  page  was  written by Brian Ristuccia <bri‐
+       anr@debian.org> and Kenshi Muto <kmuto@debian.org> for the Debian GNU/Linux system but may be used by others under the same
+       license as ssll itself.
+
+4.2 Berkeley Distribution                                  Jan 18, 2001                                                      SL(6)

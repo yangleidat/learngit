@@ -1,4 +1,4 @@
-"""MxOnline URL Configuration
+"""khpj URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -16,14 +16,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.views.generic import TemplateView
-import xadmin
-
-from users.views import LoginView
+from shoujishuju.views import getfrom
 
 urlpatterns = [
-    url(r'^xadmin/', xadmin.site.urls),
-
-    url('^$', TemplateView.as_view(template_name='index.html'), name='index'),
-    url('^login/$', LoginView.as_view(), name='login')
+    url(r'^admin/', admin.site.urls),
+    url(r'^khpj/$', getfrom, name='khpj'),
 ]
