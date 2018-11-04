@@ -11,4 +11,5 @@ def blog_article(request, article_id):
     #article = BlogArticles.objects.get(id=article_id)
     article = get_object_or_404(BlogArticles, id=article_id)
     pub = article.publish
-    return render(request, 'blog/content.html', {'article':article, 'publish':pub})
+    # request必须的，'blog/content.html'是使用的模板，第三参数的字典中的键值对，键是即将在模板中使用的变量
+    return render(request, 'blog/content.html', {'article': article, 'publish': pub})
