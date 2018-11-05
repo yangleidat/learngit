@@ -19,4 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),#namespace在HTML文件的模板中使用
+    #{% url 'account:user_login' %}account就是namespace的值，而user_login则是account/urls.py中的url的name的值
+    url(r"^account/", include('account.urls', namespace='account', app_name='account')),
+
 ]
