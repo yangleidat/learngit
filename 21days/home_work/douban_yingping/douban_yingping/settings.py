@@ -67,12 +67,19 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
 #    'douban_yingping.pipelines.DoubanYingpingPipeline': 300,
-    'scrapyapperyio.ApperyIoPipeline':300,
+    # 'scrapyapperyio.ApperyIoPipeline':300,
+    'douban_yingping.pipelines.MysqlPipeline':301
+
 }
-APPERYIO_DB_ID = '5d358b7f0f0d313c3322d2dc'
-APPERYIO_USERNAME = 'yangleidat'
-APPERYIO_PASSWORD = 'q8621587'
-APPERYIO_COLLECTION_NAME = 'DOUBAN'
+# APPERYIO_DB_ID = '5d358b7f0f0d313c3322d2dc'
+# APPERYIO_USERNAME = 'yangleidat'
+# APPERYIO_PASSWORD = 'q8621587'
+# APPERYIO_COLLECTION_NAME = 'DOUBAN'
+MYSQL_HOST = 'localhost'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = 'q8621587'
+MYSQL_DATABASE = 'scrapy'
+MYSQL_PORT = 3306
 
 
 
